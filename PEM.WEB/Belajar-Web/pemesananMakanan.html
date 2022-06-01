@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”&gt;
+
+<html>
+
+<head>
+
+<title>Warung Spesial</title>
+
+</head>
+
+<body>
+
+<!–Letakkan Listing Code JavaScript disini–>
+
+<h3>Form Pemesanan Berbasis JavaScript</h3>
+
+<form action=”#”>
+
+<table border=”1px”>
+
+<tr bgcolor=”pink”>
+
+<th>No</th>
+
+<th>Makanan/Minuman</th>
+
+<th>Harga</th>
+
+<th>Pesan</th>
+
+</tr>
+
+<tr>
+
+<td width=”15px”>1</td>
+
+<td width=”200px”>Bakso Istimewa</td>
+
+<td width=”85px” background color=”pink”>@ <input name=”bakso” value=”12000″ size=”6″ disabled=”true”/></td>
+
+<td width=”150px”><input name=”qBakso” value=”0″ onChange=”hitungPesan()”/></td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Soto Spesial</td>
+
+<td bgcolor=”pink”>@ <input name=”soto” value=”10000″ size=”6″ disabled=”true”/></td>
+
+<td><input type=”text” value=”0″ onChange=”hitungPesan()”/></td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Mie Ayam Super</td>
+
+<td bgcolor=”pink”>@ <input name=”mie” value=”15000″ size=”6″ disabled=”true”/></td>
+
+<td><input type=”text” value=”0″ onChange=”hitungPesan()”/></td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Es Degan</td>
+
+<td bgcolor=”pink”>@ <input name=”degan” value=”7000″ size=”6″ disabled=”true”/></td>
+
+<td><input type=”text” value=”0″ onChange=”hitungPesan()”/></td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Es Campur</td>
+
+<td bgcolor=”pink”>@ <input value=”7000″ size=”6″ disabled=”true”/></td>
+
+<td><input type=”text” value=”0″ onChange=”hitungPesan()”/></td>
+
+</tr>
+
+<td colspan=”3″ align=”right”>Jumlah Total</td>
+
+<td><input type=”text” disabled=”true” /></td>
+
+</tr>
+
+<td colspan=”3″ align=”right”>Diskon</td>
+
+<td><input type=”text” disabled=”true” /></td>
+
+</tr>
+
+<td colspan=”3″ align=”right”>Jumlah Dibayar</td>
+
+<td><input type=”text” disabled=”true” align=”right”/></td>
+
+</tr>
+
+</table><br/>
+
+<input value=”BATAL” onClick=”resetForm()” />
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana Ibrahim</title>
+</head>
+
+<body>
+
+    <div style="background-color:orange;text-align: center;">
+        <img src="../polindra.img.png" alt="" srcset="" width="200">
+        <h1>Welcome</h1>
+    </div>
+
+    <center>
+        <form>
+        <table>
+            <tr>
+                <td><label>Nilai 1 </label></td>
+                <td><input type="text" id="nilai1" /></td>
+            </tr>
+            <tr>
+                <td><label>Nilai 2 </label></td>
+                <td><input type="text" id="nilai2" /></td>
+            </tr>
+            <tr>
+                <td><label>Operator Hitung</label></td>
+                <td><select id="Operator">
+                    <option value="tambah">tambah (+)</option>
+                    <option value="kurang">kurang (-)</option>
+                    <option value="bagi">Bagi(:)</option>
+                    <option value="kali">Kali ()</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> 
+                    <button onclick="hitung()">Tampilkan Hasil</button> 
+                    <input type="reset"></input>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div>
+            <h3>Hasil Konversi</h3>
+            <p id="Hasil"></p>
+        </div>
+    </center>
+    </div>
+</body>
+
+<script>
+    function hitung() {
+        
+        var nilai1  = document.getElementById('nilai1');
+        var nilai2  = document.getElementById('nilai2');
+        var l1      = document.getElementById('Operator');
+        var m1;
+
+        if (l1.value=="tambah") {
+            m1 = parseInt(nilai1.value) + parseInt(nilai2.value);
+        }else if(l1.value=="kurang"){
+            m1 = parseInt(nilai1.value) - parseInt(nilai2.value);
+        }else if(l1.value=="bagi"){
+            m1 = parseInt(nilai1.value) / parseInt(nilai2.value);
+        }else if(l1.value=="kali"){
+            m1 = parseInt(nilai1.value) * parseInt(nilai2.value);
+        }
+
+        Hasil.innerHTML = "Hasil Operator Hitung" + m1;
+    }
+</script>
+
+</html>

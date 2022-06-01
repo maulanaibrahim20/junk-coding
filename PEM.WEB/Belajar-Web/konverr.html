@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana Ibrahim</title>
+</head>
+
+<body>
+
+
+    <div style="background-color:orange;text-align: center;">
+        <img src="../polindra.img.png" alt="" srcset="" width="200">
+        <h1>Welcome</h1>
+    </div>
+
+    <center>
+        <table>
+            <tr>
+                <td><label>Masukkan Nama Mahasiswa</label></td>
+                <td><input type="text" id="nama_mhs" /></td>
+            </tr>
+            <tr>
+                <td><label>Mata Uang</label></td>
+                <td><select id="MataUang">
+                    <option value="usd">USD</option>
+                    <option value="sgd">SGD</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td> <label>Nilai IDR</label></td>
+                <td colspan="2"><input type="number" id="nilai_kurs" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"> <button onclick="hitung()">Tampilkan Hasil</button></td>
+            </tr>
+        </table>
+
+        <div>
+            <h3>Hasil Konversi</h3>
+            <p id="nama_mhsw"></p>
+            <p id="p1"></p>
+        </div>
+    </center>
+    </div>
+</body>
+
+<script>
+    function hitung() {
+        
+        var nama    = document.getElementById('nama_mhs');
+        var n1      = document.getElementById('nilai_kurs');
+        var nama_   = document.getElementById('nama_mhsw');
+        var n1_     = document.getElementById('p1');
+        var l1      = document.getElementById('MataUang');
+        var m1;
+
+        if (l1.value=="usd") {
+            m1 = parseFloat(n1.value) * 0.000070;
+
+        }else if(l1.value=="sgd"){
+            m1 = parseInt(n1.value) * 10490;
+        }
+
+        nama_.innerHTML = "Nama Mahasiswa: " + nama.value;
+        n1_.innerHTML = "Nilai mata Uang: " + m1;
+    }
+</script>
+
+</html>

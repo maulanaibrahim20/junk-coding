@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana Ibrahim</title>
+</head>
+
+<body>
+
+
+    <div style="background-color:orange;text-align: center;">
+        <img src="../polindra.img.png" alt="" srcset="" width="200">
+        <h1>Welcome</h1>
+    </div>
+    
+    <center>
+    <center>
+        <table>
+            <tr>
+                <td><label for="#nama_mhs">Masukkan Nama Siswa</label></td>
+                <td><input type="text" id="nama_mhs" /></td>
+            </tr>
+            <tr>
+                <td><label for="#uts">Nilai UTS</label></td>
+                <td><input type="number" name="uts" id="uts" /></td>
+            </tr>
+            <tr>
+                <td><label for="#uas">Nilai UAS</label></td>
+                <td> <input type="number" name="uas" id="uas" /></td>
+            </tr>
+            <tr>
+                <td> <label for="#tugas_mandiri">Nilai Tugas Mandiri</label></td>
+                <td><input type="number" name="tugas_mandiri" id="tugas_mandiri" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right"><button onclick="hitung()">Tampilkan Hasil</button></td>
+            </tr>
+        </table>
+
+        <div>
+            <h3>Nilai murni yang di peroleh</h3>
+            <p id="nama"></p>
+            <p id="n1"></p>
+            <p id="n2"></p>
+            <p id="n3"></p>
+            <p id="n4"></p>
+        </div>
+    </center>
+    </div>
+</body>
+<script>
+    function hitung() {
+        var nama = document.getElementById('nama_mhs')
+        var n1 = document.getElementById('uts');
+        var n2 = document.getElementById('uas');
+        var n3 = document.getElementById('tugas_mandiri');
+        var nama_ = document.getElementById('nama');
+        var n1_ = document.getElementById('n1');
+        var n2_ = document.getElementById('n2');
+        var n3_ = document.getElementById('n3');
+        var n4_ = document.getElementById('n4');
+
+        var m1 = n1.value * 0.40;
+        var m2 = n2.value * 0.40;
+        var m3 = n3.value * 0.20;
+        var m4 = m1 + m2 + m3;
+
+        nama_.innerHTML = "Nama Mahasiswa: " + nama.value;
+        n1_.innerHTML = "Nilai murni UTS: " + m1;
+        n2_.innerHTML = "Nilai murni UAS: " + m2;
+        n3_.innerHTML = "Nilai murni Tugas: " + m3;
+        n4_.innerHTML = "Nilai akhir yang diperoleh yaitu: " + m4;
+    }
+</script>
+
+</html>

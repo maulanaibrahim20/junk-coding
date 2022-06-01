@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Maulana Ibrahim</title>
+</head>
+
+<body background="img1.jpeg">
+    <div style="text-align: center;">
+        <img src="../polindra.img.png" alt="" srcset="" width="200">
+    </div>
+<script language="JavaScript" type="text/javascript">
+function pemesanan(){
+    var nota = document.form2;
+    var hargaBakso = 12000 * eval(nota.hrgBakso.value);
+    var hargaSoto = 15000 * eval(nota.hrgSoto.value);
+    var hargaMie = 13000 * eval(nota.hrgMie.value);
+    var hargaDegan = 15000 * eval(nota.hrgDegan.value);
+    var hargaCampur = 10000 * eval(nota.hrgCampur.value);
+    var TotalHarga = hargaBakso + hargaSoto + hargaMie + hargaDegan + hargaCampur;
+if (TotalHarga > 50000){
+nota.Total.value = TotalHarga;
+nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+ } else {
+    nota.Total.value = TotalHarga;
+    nota.Diskon.value = 2000;
+    nota.Bayar.value = TotalHarga - eval(nota.Diskon.value);
+ }
+}
+function resetForm(){
+    document.form2.reset();
+}
+</script>
+<center>
+<form name="form2" action="#">
+<table border="1px">
+<tr>
+    <th bgcolor="aquamarine">No</th>
+    <th bgcolor="aquamarine">Minuman</th>
+    <th bgcolor="aquamarine">Harga</th>
+    <th bgcolor="aquamarine">Pesan</th>
+</tr>
+<tr>
+    <td width="20" bgcolor="white">1</td>
+    <td width="190"bgcolor="white">Es Kopi Susu Original</td>
+    <td width="90" bgcolor="white"> &#64; <input type="text" name="bakso" value="12.000" size="7" readonly="readonly"/></td>
+    <td width="160" bgcolor="white"><input type="text" name="hrgBakso" value="0" onfocus="this.select()" onChange="pemesanan()"/></td>
+</tr>
+<tr>
+    <td bgcolor="white">2</td>
+    <td bgcolor="white">Es Kopi Susu Gula Aren</td>
+    <td bgcolor="white"> &#64; <input type="text" name="soto" value="15.000" size="7" readonly="readonly"/></td>
+    <td bgcolor="white "><input type="text" name="hrgSoto" value="0" onfocus="this.select()" onChange="pemesanan()"/></td>
+</tr>
+<tr>
+    <td bgcolor="white">3</td>
+    <td bgcolor="white">V60</td>
+    <td bgcolor="white"> &#64; <input type="text" name="mie" value="13.000" size="7" readonly="readonly"/></td>
+    <td bgcolor="white"><input type="text" name="hrgMie" value="0" onfocus="this.select()" onChange="pemesanan()"/></td>
+</tr>
+<tr>
+    <td bgcolor="white">4</td>
+    <td bgcolor="white">Japanese</td>
+    <td bgcolor="white"> &#64; <input type="text" name="degan" value="15.000" size="7" readonly="readonly"/></td>
+    <td bgcolor="white"><input type="text" name="hrgDegan" value="0" onfocus="this.select()" onChange="pemesanan()"/></td>
+</tr>
+<tr>
+    <td bgcolor="white">5</td>
+    <td bgcolor="white">Espresso</td>
+    <td bgcolor="white"> &#64; <input type="text" name="campur" value="10.000" size="7" readonly="readonly"/></td>
+    <td bgcolor="white"><input type="text" name="hrgCampur" value="0" onfocus="this.select()" onChange="pemesanan()"/></td>
+</tr>
+<tr bgcolor="aquamarine">
+    <td colspan="3" align="right">Jumlah Total</td>
+    <td><input type="text" name="Total" readonly="readonly" /></td>
+</tr>
+<tr bgcolor="aqua">
+    <td colspan="3" align="right">Diskon</td>
+    <td><input type="text" name="Diskon" readonly="readonly"/></td>
+</tr>
+<tr bgcolor="stabilo">
+    <td colspan="3" align="right">Jumlah Dibayar</td>
+    <td><input type="text" name="Bayar" readonly="readonly" align="right"/></td>
+</tr>
+</table><br/>
+<td colspan="2" align="right"><button onclick="resetForm()">Reset</button></td>
+</form>
+</body>
+</html></em>    

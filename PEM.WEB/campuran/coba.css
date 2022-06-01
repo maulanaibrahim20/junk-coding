@@ -1,0 +1,13 @@
+.body {
+	font-size: 20px;
+	padding: 60px;
+	background-color: #FDEFEF;
+	color: black;
+}
+
+td {
+	box-shadow: 0 2px 4px 0rgba(165, 165, 165, 1);
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 20px;
+}
